@@ -1,8 +1,8 @@
-
 require 'sinatra'
-require 'json'
+
+set :bind, '0.0.0.0'
+set :port, 5000
 
 get '/' do
-  content_type :json
-  { msg: "Hello from Ruby backend 💎" }.to_json
+  "Hello from Ruby Backend (Sinatra)!"
 end
