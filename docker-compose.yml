@@ -1,0 +1,49 @@
+version: "3.9"
+services:
+  backend_node:
+    build: ./backend_node
+    container_name: backend_node_service
+    ports:
+      - "5001:5000"
+    restart: unless-stopped
+
+  backend_python:
+    build: ./backend_python
+    container_name: backend_python_service
+    ports:
+      - "5002:5000"
+    restart: unless-stopped
+
+  backend_golang:
+    build: ./backend_golang
+    container_name: backend_golang_service
+    ports:
+      - "5003:5000"
+    restart: unless-stopped
+
+  backend_java:
+    build: ./backend_java
+    container_name: backend_java_service
+    ports:
+      - "5004:5000"
+    restart: unless-stopped
+
+  backend_php:
+    build: ./backend_php
+    container_name: backend_php_service
+    ports:
+      - "5005:5000"
+    restart: unless-stopped
+
+  backend_ruby:
+    build: ./backend_ruby
+    container_name: backend_ruby_service
+    ports:
+      - "5006:5000"
+
+  backend_dotnet:
+    build: ./backend_dotnet
+    container_name: backend_dotnet_service
+    ports:
+      - "5007:5000"
+    restart: unless-stopped
